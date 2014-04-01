@@ -2,29 +2,43 @@
 using namespace std;
 
 #include "Screen.h"
-#include "Integrator.h"
+#include "TestIntegrator.h"
 #include "Shape3d.h"
+#include "Camera.h"
+#include "SimpleSampler.h"
 
 int main(int argc, char** argv)
 {
 	cout << "test";
 
-	//Screen screen(800, 600);
-	Camera camera(800, 600, 90, 5, 0.1);
-	Integrator* integrator;
+	//Camera, resolution, sensor size diag meters, sensor 
+	Camera camera(800, 600, 90, 5, 0.1f);
+	TestIntegrator integrator;
 
-	Shape3d dragon("dragonmesh.obj");
+	Shape3d box("box.obj");
 	
-	//for now, start casting right away
+	SimpleSampler sampler;
 
-	uint i = 0, j = 0;
+	//for now, start casting right away
+	size_t i = 0;
+	size_t j = 0;
 	for (i = 0; i < camera.getWidth(); i++)
 	{
 		for (j = 0; j < camera.getHeight(); j++)
 		{
-			Ray shootme = camera->getRay(i, j);
-			Quantum
-			camera.setSensor(i, j, integrator, shootme);
+			float u = static_cast<float>(i) / static_cast<float>(camera.getWidth());
+			float v = static_cast<float>(j) / static_cast<float>(camera.getHeight());
+
+			//generate origin samples
+			Sample originx = sampler.getSample();
+			Sample originy = sampler.getSample();
+			Sample aperturex = sampler.getSample();
+			Sample aperturey = sampler.getSample();
+
+			//shoot ray into scene
+			Ray shootme = camera.getRay(originx, originy, aperturex, aperturey);
+			
+			camera.exposeSensor(i, j, &integrator, &shootme);
 		}
 	}
 

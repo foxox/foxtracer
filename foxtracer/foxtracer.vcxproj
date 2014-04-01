@@ -75,6 +75,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="common.h" />
     <ClInclude Include="foxmath3.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="RaycastIntegrator.h" />
@@ -84,6 +85,8 @@
     <ClInclude Include="Integrator.h" />
     <ClInclude Include="SGNode.h" />
     <ClInclude Include="Shape3d.h" />
+    <ClInclude Include="SimpleSampler.h" />
+    <ClInclude Include="TestIntegrator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
@@ -96,6 +99,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SGNode.cpp" />
     <ClCompile Include="Shape3d.cpp" />
+    <ClCompile Include="SimpleSampler.cpp" />
+    <ClCompile Include="TestIntegrator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="notes.txt" />

@@ -20,3 +20,11 @@
 *.out
 *.app
 *.user
+
+foxtracer/Debug/
+foxtracer/Release/
+
+ImageIO/x64/Debug/
+ImageIO/x64/Release/
+*.suo
+*.sdf

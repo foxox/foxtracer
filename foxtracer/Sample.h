@@ -3,7 +3,7 @@
 class Sample
 {
 private:
-	float hue;
+	float hue;//huehue
 	float intensity;
 
 public:
