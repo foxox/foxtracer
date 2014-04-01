@@ -1,0 +1,20 @@
+Data structures Layout
+
+Camera
+	stores:
+		sensor size
+		focal length
+		focus distance
+		aperture size
+	getters:
+		sensor H/W
+	getRay()
+		returns a ray from some sensor pixel
+	stores an array of Quantum(s/a) for the sensor
+
+Integrator
+	Li - incident light going toward some ray
+		takes scene and ray
+
+Quantum
+	stores one packet of light information
