@@ -1,6 +1,6 @@
 #pragma once
 
-class Sample
+/*class Sample
 {
 private:
 	float hue;//huehue
@@ -10,4 +10,6 @@ public:
 	Sample(void);
 	~Sample(void);
 };
+*/
 
+typedef float Sample;

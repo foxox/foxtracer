@@ -44,13 +44,13 @@
     <ClInclude Include="RaycastIntegrator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleSampler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TestIntegrator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleSampler1D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -85,10 +85,10 @@
     <ClCompile Include="RaycastIntegrator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleSampler.cpp">
+    <ClCompile Include="TestIntegrator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TestIntegrator.cpp">
+    <ClCompile Include="SimpleSampler1D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

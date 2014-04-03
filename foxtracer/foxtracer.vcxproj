@@ -85,7 +85,7 @@
     <ClInclude Include="Integrator.h" />
     <ClInclude Include="SGNode.h" />
     <ClInclude Include="Shape3d.h" />
-    <ClInclude Include="SimpleSampler.h" />
+    <ClInclude Include="SimpleSampler1D.h" />
     <ClInclude Include="TestIntegrator.h" />
   </ItemGroup>
   <ItemGroup>
@@ -99,7 +99,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SGNode.cpp" />
     <ClCompile Include="Shape3d.cpp" />
-    <ClCompile Include="SimpleSampler.cpp" />
+    <ClCompile Include="SimpleSampler1D.cpp" />
     <ClCompile Include="TestIntegrator.cpp" />
   </ItemGroup>
   <ItemGroup>

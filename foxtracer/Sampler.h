@@ -7,11 +7,15 @@ using namespace std;
 
 class Sampler
 {
+protected:
+	const size_t numSamples;
+
 public:
-	Sampler(void);
+	Sampler();
+	Sampler(size_t _numSamples);
 	virtual ~Sampler(void);
 
-	virtual Sample getSample() = 0;
-	virtual vector<Sample> getSampleBatch() = 0;
+	virtual Sample getNextSample() = 0;
+	//virtual vector<Sample> getNextSampleBatch() = 0;
 };
 

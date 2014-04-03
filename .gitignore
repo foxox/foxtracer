@@ -28,3 +28,5 @@ ImageIO/x64/Debug/
 ImageIO/x64/Release/
 *.suo
 *.sdf
+*.pdb
+*.ilk
