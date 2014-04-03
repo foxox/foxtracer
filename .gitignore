@@ -21,14 +21,20 @@
 *.app
 *.user
 
+# VS Build Files
+*.suo
+*.sdf
+*.pdb
+*.ilk
+*.pdb
+*.opensdf
+*.ipch
+
 foxtracer/Debug/
 foxtracer/Release/
 
 ImageIO/x64/Debug/
 ImageIO/x64/Release/
-*.suo
-*.sdf
-*.pdb
-*.ilk
-Debug/foxtracer.pdb
-*.pdb
+
+ipch/
+
