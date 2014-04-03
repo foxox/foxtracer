@@ -30,3 +30,5 @@ ImageIO/x64/Release/
 *.sdf
 *.pdb
 *.ilk
+Debug/foxtracer.pdb
+*.pdb
