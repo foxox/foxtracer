@@ -1,15 +1,12 @@
 #pragma once
 
-/*class Sample
+class Quantum
 {
 private:
 	float hue;//huehue
 	float intensity;
 
 public:
-	Sample(void);
-	~Sample(void);
+	Quantum(void);
+	virtual ~Quantum(void);
 };
-*/
-
-typedef float Sample;

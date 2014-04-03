@@ -5,7 +5,7 @@ using namespace std;
 #include "TestIntegrator.h"
 #include "Shape3d.h"
 #include "Camera.h"
-#include "SimpleSampler1D.h"
+#include "SimpleSampler2D.h"
 
 #include <random>
 
@@ -55,7 +55,7 @@ int main(int argc, char** argv)
 
 	//generate a bunch of samples and write to an image file to show them.
 	size_t sampleCount = 100;
-	Sampler* sampler = new SimpleSampler1D(sampleCount);
+	Sampler2D* sampler = new SimpleSampler2D(sampleCount);
 	std::tr1::uniform_real_distribution<> distribution;
 	unsigned char* imageout = new unsigned char[100*100*3];
 	size_t imageoutISIZE = 100;
@@ -64,12 +64,10 @@ int main(int argc, char** argv)
 	memset(imageout, 255, imageoutISIZE*imageoutJSIZE*imageoutKSIZE*sizeof(unsigned char));
 	for (size_t i = 0; i < 10; i++)
 	{
-		//TODO: change this to return 2d samples???
-		Sample sampx = sampler->getNextSample();
-		Sample sampy = sampler->getNextSample();
+		Sample2D samp = sampler->getNextSample();
 
-		size_t x = static_cast<size_t>(sampx * static_cast<float>(imageoutISIZE));
-		size_t y = static_cast<size_t>(sampy * static_cast<float>(imageoutJSIZE));
+		size_t x = static_cast<size_t>(samp.x * static_cast<float>(imageoutISIZE));
+		size_t y = static_cast<size_t>(samp.y * static_cast<float>(imageoutJSIZE));
 
 		i3(imageout, x, y, 0) = 0;
 	}

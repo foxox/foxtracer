@@ -77,29 +77,39 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="foxmath3.h" />
+    <ClInclude Include="Quantum.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="RaycastIntegrator.h" />
-    <ClInclude Include="Sample.h" />
+    <ClInclude Include="Sample1D.h" />
+    <ClInclude Include="Sample2D.h" />
     <ClInclude Include="Sampler.h" />
+    <ClInclude Include="Sampler1D.h" />
+    <ClInclude Include="Sampler2D.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="Integrator.h" />
     <ClInclude Include="SGNode.h" />
     <ClInclude Include="Shape3d.h" />
     <ClInclude Include="SimpleSampler1D.h" />
+    <ClInclude Include="SimpleSampler2D.h" />
     <ClInclude Include="TestIntegrator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="foxmath3.cpp" />
+    <ClCompile Include="Quantum.cpp" />
     <ClCompile Include="Ray.cpp" />
     <ClCompile Include="RaycastIntegrator.cpp" />
-    <ClCompile Include="Sample.cpp" />
+    <ClCompile Include="Sample1D.cpp" />
+    <ClCompile Include="Sample2D.cpp" />
     <ClCompile Include="Sampler.cpp" />
+    <ClCompile Include="Sampler1D.cpp" />
+    <ClCompile Include="Sampler2D.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SGNode.cpp" />
     <ClCompile Include="Shape3d.cpp" />
     <ClCompile Include="SimpleSampler1D.cpp" />
+    <ClCompile Include="SimpleSampler2D.cpp" />
     <ClCompile Include="TestIntegrator.cpp" />
   </ItemGroup>
   <ItemGroup>

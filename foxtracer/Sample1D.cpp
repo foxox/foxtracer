@@ -1,5 +1,4 @@
-#include "Sample.h"
-
+#include "Sample1D.h"
 
 //Sample::Sample(void)
 //{

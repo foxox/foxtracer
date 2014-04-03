@@ -11,7 +11,7 @@ Camera::~Camera(void)
 }
 
 
-Ray Camera::getRay(Sample originx, Sample originy, Sample aperturex, Sample aperturey)
+Ray Camera::getRay(Sample2D origin, Sample2D aperture)
 {
 	//Create a ray given the inputs
 	Ray returnme;

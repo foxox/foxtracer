@@ -6,7 +6,9 @@
 #include "Ray.h"
 #include "Integrator.h"
 
-#include "Sample.h"
+#include "Quantum.h"
+
+#include "Sample2D.h"
 
 using namespace FM;
 
@@ -24,7 +26,7 @@ public:
 	Vec3 pos;
 	Mat4 rot;
 
-	Sample* sensor;
+	Quantum* sensor;
 	size_t sensorJSIZE;
 
 	Camera(void);
@@ -36,7 +38,7 @@ public:
 	inline size_t getWidth() { return this->width; }
 	inline size_t getHeight() { return this->height; }
 
-	Ray getRay(Sample originx, Sample originy, Sample aperturex, Sample aperturey);
+	Ray getRay(Sample2D origin, Sample2D aperture);
 	void exposeSensor(size_t i, size_t j, Integrator* integrator, Ray* theray);
 };
 
