@@ -9,12 +9,9 @@ using namespace std;
 
 #include <random>
 
-std::tr1::random_device rd;
-std::tr1::mt19937 mt(rd());
-
 int main(int argc, char** argv)
 {
-	cout << "test";
+	//cout << "test";
 
 	//Camera, resolution, sensor size diag meters, sensor 
 	//Camera camera(800, 600, 90, 5, 0.1f);
@@ -54,23 +51,64 @@ int main(int argc, char** argv)
 
 
 	//generate a bunch of samples and write to an image file to show them.
-	size_t sampleCount = 100;
-	Sampler2D* sampler = new SimpleSampler2D(sampleCount);
-	std::tr1::uniform_real_distribution<> distribution;
-	unsigned char* imageout = new unsigned char[100*100*3];
-	size_t imageoutISIZE = 100;
-	size_t imageoutJSIZE = 100;
-	size_t imageoutKSIZE = 3;
+	const size_t numSamples = 500;
+	FloatRange xrange(0, 1);
+	FloatRange yrange(0, 1);
+	Sampler2D* sampler = new SimpleSampler2D(numSamples,xrange,yrange);
+	const size_t imageoutSideSize = 200;
+	const size_t imageoutISIZE = imageoutSideSize;
+	const size_t imageoutJSIZE = imageoutSideSize;
+	const size_t imageoutKSIZE = 3;
+	unsigned char* imageout = new unsigned char[imageoutISIZE*imageoutJSIZE*imageoutKSIZE];
 	memset(imageout, 255, imageoutISIZE*imageoutJSIZE*imageoutKSIZE*sizeof(unsigned char));
-	for (size_t i = 0; i < 10; i++)
+
+	//RNG testing
+	std::tr1::random_device rd;
+	std::tr1::mt19937 mt(rd());
+	std::tr1::uniform_real_distribution<> distribution(0.0,1.0);
+
+	//Draw lines
+	const size_t numDivs = 10;
+	for (size_t i = 1; i < numDivs; i++)
+	{
+		size_t i10 = i * imageoutSideSize / numDivs;
+
+		//Draw row
+		for (size_t j = 0; j < imageoutJSIZE; j++)
+		{
+			//i3(imageout, i10, j, 0) = 128;
+			i3(imageout, i10, j, 1) = 128;
+			i3(imageout, i10, j, 2) = 128;
+		}
+
+		//Draw col
+		for (size_t j = 0; j < imageoutISIZE; j++)
+		{
+			//i3(imageout, j, i10, 0) = 128;
+			i3(imageout, j, i10, 1) = 128;
+			i3(imageout, j, i10, 2) = 128;
+		}
+	}
+
+	//Samples!
+	for (size_t i = 0; i < numSamples; i++)
 	{
 		Sample2D samp = sampler->getNextSample();
+
+		samp.x = static_cast<float>(distribution(mt));
+		samp.y = static_cast<float>(distribution(mt));
 
 		size_t x = static_cast<size_t>(samp.x * static_cast<float>(imageoutISIZE));
 		size_t y = static_cast<size_t>(samp.y * static_cast<float>(imageoutJSIZE));
 
-		i3(imageout, x, y, 0) = 0;
+		//cout << x << "," << y << endl;
+
+		i3(imageout, y, x, 0) = 0;
+		i3(imageout, y, x, 1) = 0;
+		i3(imageout, y, x, 2) = 0;
 	}
+
+	ImageOutRGB2BMP("simple.bmp", imageoutISIZE, imageoutJSIZE, imageout);
 
 	return 0;
 }

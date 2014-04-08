@@ -5,7 +5,7 @@ class SimpleSampler2D :
 {
 public:
 	SimpleSampler2D(void);
-	SimpleSampler2D(size_t numSamples) : Sampler2D(numSamples) {}
+	SimpleSampler2D(size_t numSamples, FloatRange sampleRangeX, FloatRange sampleRangeY) : Sampler2D(numSamples, sampleRangeX, sampleRangeY) {}
 	virtual ~SimpleSampler2D(void);
 
 	virtual Sample2D getNextSample();

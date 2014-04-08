@@ -1,12 +1,13 @@
 #include "SimpleSampler1D.h"
 
 
-SimpleSampler1D::SimpleSampler1D() : Sampler1D()
-{
-}
+//SimpleSampler1D::SimpleSampler1D() : Sampler1D()
+//{
+//}
 
-SimpleSampler1D::SimpleSampler1D(size_t numSamples) : Sampler1D(numSamples)
+SimpleSampler1D::SimpleSampler1D(size_t numSamples, FloatRange sampleRange) : Sampler1D(numSamples, sampleRange)
 {
+
 }
 
 
@@ -18,7 +19,8 @@ SimpleSampler1D::~SimpleSampler1D()
 Sample1D SimpleSampler1D::getNextSample()
 {
 	Sample1D returnme;
-	//TODO: form sample to return from SimpleSampler1D
+	//TODO: use RNG to make sample, then return it
+	//this->
 	returnme = 0.0f;
 	return returnme;
 }

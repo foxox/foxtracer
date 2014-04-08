@@ -1,18 +1,34 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foxtracer", "foxtracer\foxtracer.vcxproj", "{FDB7EB4C-4116-4066-9EF9-A1015E82D61F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageIO", "ImageIO\ImageIO.vcxproj", "{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FDB7EB4C-4116-4066-9EF9-A1015E82D61F}.Debug|Win32.ActiveCfg = Debug|Win32
 		{FDB7EB4C-4116-4066-9EF9-A1015E82D61F}.Debug|Win32.Build.0 = Debug|Win32
+		{FDB7EB4C-4116-4066-9EF9-A1015E82D61F}.Debug|x64.ActiveCfg = Debug|Win32
 		{FDB7EB4C-4116-4066-9EF9-A1015E82D61F}.Release|Win32.ActiveCfg = Release|Win32
 		{FDB7EB4C-4116-4066-9EF9-A1015E82D61F}.Release|Win32.Build.0 = Release|Win32
+		{FDB7EB4C-4116-4066-9EF9-A1015E82D61F}.Release|x64.ActiveCfg = Release|Win32
+		{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}.Debug|Win32.Build.0 = Debug|Win32
+		{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}.Debug|x64.ActiveCfg = Debug|x64
+		{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}.Debug|x64.Build.0 = Debug|x64
+		{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}.Release|Win32.ActiveCfg = Release|Win32
+		{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}.Release|Win32.Build.0 = Release|Win32
+		{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}.Release|x64.ActiveCfg = Release|x64
+		{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,9 +6,13 @@
 class Sampler2D :
 	public Sampler
 {
+protected:
+	FloatRange sampleRangeX;
+	FloatRange sampleRangeY;
+
 public:
-	Sampler2D(void);
-	Sampler2D(size_t numSamples) : Sampler(numSamples) {}
+	//Sampler2D(void);
+	Sampler2D(size_t numSamples, FloatRange sampleRangeX, FloatRange sampleRangeY) : Sampler(numSamples), sampleRangeX(sampleRangeX), sampleRangeY(sampleRangeY) {}
 	virtual ~Sampler2D(void);
 
 	virtual Sample2D getNextSample() = 0;

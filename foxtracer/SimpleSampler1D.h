@@ -5,8 +5,8 @@ class SimpleSampler1D :
 	public Sampler1D
 {
 public:
-	SimpleSampler1D();
-	SimpleSampler1D(size_t numSamples);
+	//SimpleSampler1D();
+	SimpleSampler1D(size_t numSamples, FloatRange sampleRange);
 	virtual ~SimpleSampler1D();
 
 	virtual Sample1D getNextSample();

@@ -9,6 +9,7 @@ using namespace std;
 #define i2(arr,i,j) arr[((i) * (arr ## JSIZE)) + (j)]
 
 //TODO: Have these use precomputed JSIZE * KSIZE, JSIZE * KSIZE * LSIZE, KSIZE*LSIZE
+//ehhh... compiler probably does that anyway.
 
 #define i3(arr,i,j,k) arr[((i) * ((arr ## JSIZE) * (arr ## KSIZE))) + (j) * (arr ## KSIZE) + (k)]
 //#define i3s(arr,i,j,k,jSize,kSize) arr[( (i) * (jSize) * (kSize) ) + (j) * (kSize) + (k)]

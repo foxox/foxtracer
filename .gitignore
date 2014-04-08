@@ -38,3 +38,8 @@ ImageIO/x64/Release/
 
 ipch/
 
+*.exp
+*.log
+
+ImageIO/Debug/
+ImageIO/Release/

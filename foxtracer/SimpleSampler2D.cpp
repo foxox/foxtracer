@@ -1,9 +1,9 @@
 #include "SimpleSampler2D.h"
 
 
-SimpleSampler2D::SimpleSampler2D(void)
-{
-}
+//SimpleSampler2D::SimpleSampler2D(void)
+//{
+//}
 
 
 SimpleSampler2D::~SimpleSampler2D(void)

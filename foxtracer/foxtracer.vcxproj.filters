@@ -9,15 +9,15 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="Samplers">
+      <UniqueIdentifier>{e64172b4-1516-49dd-ae18-37d4d399f8b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Integrator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sampler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Screen.h">
@@ -44,26 +44,32 @@
     <ClInclude Include="common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleSampler1D.h">
+    <ClInclude Include="Quantum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sampler1D.h">
+    <ClInclude Include="FloatRange.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Sampler2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SimpleSampler2D.h">
-      <Filter>Header Files</Filter>
+      <Filter>Samplers</Filter>
     </ClInclude>
     <ClInclude Include="Sample1D.h">
-      <Filter>Header Files</Filter>
+      <Filter>Samplers</Filter>
     </ClInclude>
     <ClInclude Include="Sample2D.h">
-      <Filter>Header Files</Filter>
+      <Filter>Samplers</Filter>
     </ClInclude>
-    <ClInclude Include="Quantum.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Sampler.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sampler1D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleSampler1D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleSampler2D.h">
+      <Filter>Samplers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,9 +77,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Ray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sampler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Screen.cpp">
@@ -97,26 +100,29 @@
     <ClCompile Include="TestIntegrator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleSampler1D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sampler1D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sampler2D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleSampler2D.cpp">
+    <ClCompile Include="Quantum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sample1D.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="Sample2D.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Samplers</Filter>
     </ClCompile>
-    <ClCompile Include="Quantum.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Sampler.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sampler1D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSampler1D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSampler2D.cpp">
+      <Filter>Samplers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

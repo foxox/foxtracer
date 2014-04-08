@@ -73,9 +73,9 @@ void ImageOutRGB2BMP(const string& filename, unsigned int width, unsigned int he
 	{
 		for (i = 0; i < width; i++)
 		{
-			file.write(reinterpret_cast<const char *>(image + (height - j - 1) * width * 3 + i * 3 + 0), 1);
-			file.write(reinterpret_cast<const char *>(image + (height - j - 1) * width * 3 + i * 3 + 1), 1);
 			file.write(reinterpret_cast<const char *>(image + (height - j - 1) * width * 3 + i * 3 + 2), 1);
+			file.write(reinterpret_cast<const char *>(image + (height - j - 1) * width * 3 + i * 3 + 1), 1);
+			file.write(reinterpret_cast<const char *>(image + (height - j - 1) * width * 3 + i * 3 + 0), 1);
 		}
 		for (k = 0; k < padding; k++)
 		{
