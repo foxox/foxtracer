@@ -9,6 +9,8 @@ using namespace std;
 
 #include <random>
 
+void generateExampleImage(Sampler2D* sampler, string name);
+
 int main(int argc, char** argv)
 {
 	//cout << "test";
@@ -59,6 +61,15 @@ int main(int argc, char** argv)
 		std::tr1::mt19937 mt(rd());
 		//std::tr1::uniform_real_distribution<> distribution(0.0, 1.0);
 	Sampler2D* sampler = new SimpleSampler2D(numSamples,&mt,xrange,yrange);
+
+
+	generateExampleImage(sampler, "simple");
+
+	return 0;
+}
+
+void generateExampleImage(Sampler2D* sampler, string name)
+{
 	const size_t imageoutSideSize = 200;
 	const size_t imageoutISIZE = imageoutSideSize;
 	const size_t imageoutJSIZE = imageoutSideSize;
@@ -90,7 +101,7 @@ int main(int argc, char** argv)
 	}
 
 	//Samples!
-	for (size_t i = 0; i < numSamples; i++)
+	for (size_t i = 0; i < sampler->getNumSamples(); i++)
 	{
 		Sample2D samp = sampler->getNextSample();
 
@@ -107,9 +118,5 @@ int main(int argc, char** argv)
 		i3(imageout, y, x, 2) = 0;
 	}
 
-	ImageOutRGB2BMP("simple.bmp", imageoutISIZE, imageoutJSIZE, imageout);
-
-	return 0;
+	ImageOutRGB2BMP(name+".bmp", imageoutISIZE, imageoutJSIZE, imageout);
 }
-
-//void draw();

@@ -96,6 +96,7 @@
     <ClInclude Include="Shape3d.h" />
     <ClInclude Include="SimpleSampler1D.h" />
     <ClInclude Include="SimpleSampler2D.h" />
+    <ClInclude Include="StratifiedSampler2D.h" />
     <ClInclude Include="TestIntegrator.h" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +116,7 @@
     <ClCompile Include="Shape3d.cpp" />
     <ClCompile Include="SimpleSampler1D.cpp" />
     <ClCompile Include="SimpleSampler2D.cpp" />
+    <ClCompile Include="StratifiedSampler2D.cpp" />
     <ClCompile Include="TestIntegrator.cpp" />
   </ItemGroup>
   <ItemGroup>

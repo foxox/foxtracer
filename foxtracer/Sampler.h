@@ -23,5 +23,7 @@ public:
 
 	//virtual Sample getNextSample() = 0;
 	//virtual vector<Sample> getNextSampleBatch() = 0;
+
+	virtual size_t getNumSamples();
 };
 

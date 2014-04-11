@@ -15,3 +15,9 @@ Sampler::Sampler(size_t _numSamples, std::default_random_engine* _pRNGEngine) : 
 Sampler::~Sampler(void)
 {
 }
+
+
+size_t Sampler::getNumSamples()
+{
+	return this->numSamples;
+}
