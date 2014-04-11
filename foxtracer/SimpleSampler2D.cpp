@@ -13,7 +13,7 @@ SimpleSampler2D::~SimpleSampler2D(void)
 Sample2D SimpleSampler2D::getNextSample()
 {
 	Sample2D returnme;
-	returnme.x = 0.0f;
-	returnme.y = 0.0f;
+	returnme.x = /*static_cast<float>(*/this->RNGDistributionX(*this->pRNGEngine);
+	returnme.y = /*static_cast<float>(*/this->RNGDistributionY(*this->pRNGEngine);
 	return returnme;
 }

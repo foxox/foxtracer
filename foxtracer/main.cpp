@@ -54,18 +54,17 @@ int main(int argc, char** argv)
 	const size_t numSamples = 500;
 	FloatRange xrange(0, 1);
 	FloatRange yrange(0, 1);
-	Sampler2D* sampler = new SimpleSampler2D(numSamples,xrange,yrange);
+	//RNG stuff, pass into sampler
+		std::tr1::random_device rd;
+		std::tr1::mt19937 mt(rd());
+		//std::tr1::uniform_real_distribution<> distribution(0.0, 1.0);
+	Sampler2D* sampler = new SimpleSampler2D(numSamples,&mt,xrange,yrange);
 	const size_t imageoutSideSize = 200;
 	const size_t imageoutISIZE = imageoutSideSize;
 	const size_t imageoutJSIZE = imageoutSideSize;
 	const size_t imageoutKSIZE = 3;
 	unsigned char* imageout = new unsigned char[imageoutISIZE*imageoutJSIZE*imageoutKSIZE];
 	memset(imageout, 255, imageoutISIZE*imageoutJSIZE*imageoutKSIZE*sizeof(unsigned char));
-
-	//RNG testing
-	std::tr1::random_device rd;
-	std::tr1::mt19937 mt(rd());
-	std::tr1::uniform_real_distribution<> distribution(0.0,1.0);
 
 	//Draw lines
 	const size_t numDivs = 10;
@@ -95,8 +94,8 @@ int main(int argc, char** argv)
 	{
 		Sample2D samp = sampler->getNextSample();
 
-		samp.x = static_cast<float>(distribution(mt));
-		samp.y = static_cast<float>(distribution(mt));
+		//samp.x = static_cast<float>(distribution(mt));
+		//samp.y = static_cast<float>(distribution(mt));
 
 		size_t x = static_cast<size_t>(samp.x * static_cast<float>(imageoutISIZE));
 		size_t y = static_cast<size_t>(samp.y * static_cast<float>(imageoutJSIZE));

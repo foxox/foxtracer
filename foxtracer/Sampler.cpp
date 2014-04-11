@@ -6,9 +6,9 @@
 //
 //}
 
-Sampler::Sampler(size_t _numSamples) : numSamples(_numSamples)
+Sampler::Sampler(size_t _numSamples, std::default_random_engine* _pRNGEngine) : numSamples(_numSamples), pRNGEngine(_pRNGEngine)
 {
-
+	//this->RNGDistribution = uniform_real_distribution(this)
 }
 
 

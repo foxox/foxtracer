@@ -6,7 +6,7 @@ class SimpleSampler1D :
 {
 public:
 	//SimpleSampler1D();
-	SimpleSampler1D(size_t numSamples, FloatRange sampleRange);
+	SimpleSampler1D(size_t numSamples, std::default_random_engine* _pRNGEngine, FloatRange sampleRange);
 	virtual ~SimpleSampler1D();
 
 	virtual Sample1D getNextSample();

@@ -8,7 +8,7 @@ protected:
 	FloatRange sampleRange;
 public:
 	//Sampler1D(void);
-	Sampler1D(size_t numSamples, FloatRange sampleRange) : Sampler(numSamples), sampleRange(sampleRange) {}
+	Sampler1D(size_t numSamples, std::default_random_engine* _pRNGEngine, FloatRange sampleRange) : Sampler(numSamples, _pRNGEngine), sampleRange(sampleRange) {}
 	virtual ~Sampler1D(void);
 };
 
