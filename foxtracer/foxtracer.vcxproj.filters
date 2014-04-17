@@ -74,6 +74,9 @@
     <ClInclude Include="StratifiedSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
+    <ClInclude Include="LatinHypercubeSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -128,6 +131,9 @@
       <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="StratifiedSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="LatinHypercubeSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
   </ItemGroup>
