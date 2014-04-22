@@ -5,6 +5,8 @@
 
 #include "FloatRange.h"
 
+#include "common.h"
+
 #include <Random>
 
 using namespace std;

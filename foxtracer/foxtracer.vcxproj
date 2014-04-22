@@ -82,6 +82,8 @@
     <ClInclude Include="common.h" />
     <ClInclude Include="foxmath3.h" />
     <ClInclude Include="FloatRange.h" />
+    <ClInclude Include="HaltonSampler2D.h" />
+    <ClInclude Include="HammerslySampler2D.h" />
     <ClInclude Include="LatinHypercubeSampler2D.h" />
     <ClInclude Include="Quantum.h" />
     <ClInclude Include="Ray.h" />
@@ -103,6 +105,8 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="foxmath3.cpp" />
+    <ClCompile Include="HaltonSampler2D.cpp" />
+    <ClCompile Include="HammerslySampler2D.cpp" />
     <ClCompile Include="LatinHypercubeSampler2D.cpp" />
     <ClCompile Include="Quantum.cpp" />
     <ClCompile Include="Ray.cpp" />

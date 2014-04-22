@@ -8,6 +8,8 @@ using namespace std;
 #include "SimpleSampler2D.h"
 #include "StratifiedSampler2D.h"
 #include "LatinHypercubeSampler2D.h"
+#include "HaltonSampler2D.h"
+#include "HammerslySampler2D.h"
 
 #include <random>
 
@@ -75,6 +77,14 @@ int main(int argc, char** argv)
 
 	sampler = new LatinHypercubeSampler2D(numSamples, &mt, xrange, yrange);
 	generateExampleImage(sampler, "latinhypercube");
+	delete sampler;
+
+	sampler = new HaltonSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage(sampler, "haltonsampler");
+	delete sampler;
+	
+	sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage(sampler, "hammerslysampler");
 	delete sampler;
 
 	return 0;
