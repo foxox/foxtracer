@@ -10,6 +10,7 @@ using namespace std;
 #include "LatinHypercubeSampler2D.h"
 #include "HaltonSampler2D.h"
 #include "HammerslySampler2D.h"
+#include "VanDerCorputSobolSampler2D.h"
 
 #include <random>
 
@@ -85,6 +86,10 @@ int main(int argc, char** argv)
 	
 	sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
 	generateExampleImage(sampler, "hammerslysampler");
+	delete sampler;
+
+	sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage(sampler, "vandercorputsobolsampler");
 	delete sampler;
 
 	return 0;

@@ -66,3 +66,21 @@ inline float VanDerCorput(uint32_t n, uint32_t scramble)
 	n ^= scramble;
 	return ((n >> 8) & 0xffffff) / static_cast<float>(1 << 24);
 }
+
+inline float VanDerCorput2(uint32_t n)
+{
+	return static_cast<float>(radicalInverse(n, 2));
+}
+
+
+inline float Sobol2(uint32_t n, uint32_t scramble)
+{
+	for (uint32_t v = 1 << 31; n != 0; n >>= 1, v ^= v >> 1)
+	{
+		if (n & 0x1)
+		{
+			scramble ^= v;
+		}
+	}
+	return ((scramble >> 8) & 0xffffff) / static_cast<float>(1 << 24);
+}

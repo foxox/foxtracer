@@ -83,6 +83,12 @@
     <ClInclude Include="HammerslySampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
+    <ClInclude Include="VanDerCorputSobolSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="DartThresholdSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -146,6 +152,12 @@
       <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="HammerslySampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="VanDerCorputSobolSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="DartThresholdSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
   </ItemGroup>

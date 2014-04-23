@@ -1,11 +1,11 @@
-#include "SimpleSampler2D.h"
+#include "DartThresholdSampler2D.h"
 
 
-SimpleSampler2D::~SimpleSampler2D(void)
+DartThresholdSampler2D::~DartThresholdSampler2D(void)
 {
 }
 
-Sample2D SimpleSampler2D::getNextSample()
+Sample2D DartThresholdSampler2D::getNextSample()
 {
 	Sample2D returnme;
 	returnme.x = this->RNGDistributionX(*this->pRNGEngine);
