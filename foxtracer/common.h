@@ -5,6 +5,8 @@
 #include <iostream>
 #include <cmath>
 
+#include <stdint.h>
+
 using namespace std;
 
 #include "../ImageIO/ImageIO.h"
