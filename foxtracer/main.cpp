@@ -16,16 +16,64 @@ using namespace std;
 
 #include <random>
 
-void generateExampleImage(Sampler2D* sampler, string name);
+void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name);
 
 int main(int argc, char** argv)
+{
+	//generate a bunch of samples and write to an image file to show them.
+	const size_t numSamples = 200;
+	FloatRange xrange(0, 1);
+	FloatRange yrange(0, 1);
+	//RNG stuff, pass into sampler
+	std::tr1::random_device rd;
+	std::tr1::mt19937 mt(rd());
+	//std::tr1::uniform_real_distribution<> distribution(0.0, 1.0);
+	
+	Sampler2D* sampler;
+	
+	sampler = new SimpleSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage2DSampleGrid(sampler, "simple");
+	delete sampler;
+
+	sampler = new StratifiedSampler2D(numSamples, &mt, xrange, yrange, 10, 10);
+	generateExampleImage2DSampleGrid(sampler, "stratified");
+	delete sampler;
+
+	sampler = new LatinHypercubeSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage2DSampleGrid(sampler, "latinhypercube");
+	delete sampler;
+
+	sampler = new HaltonSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage2DSampleGrid(sampler, "haltonsampler");
+	delete sampler;
+	
+	sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage2DSampleGrid(sampler, "hammerslysampler");
+	delete sampler;
+
+	sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage2DSampleGrid(sampler, "vandercorputsobolsampler");
+	delete sampler;
+
+	sampler = new DartThresholdSampler2D(numSamples, &mt, xrange, yrange, 0.003f);
+	generateExampleImage2DSampleGrid(sampler, "dartthresholdsampler");
+	delete sampler;
+
+	sampler = new BestCandidateSampler2D(numSamples, &mt, xrange, yrange, 10);
+	generateExampleImage2DSampleGrid(sampler, "bestcandidatesampler");
+	delete sampler;
+
+	return 0;
+}
+
+void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name)
 {
 	//Camera, resolution, sensor size diag meters, sensor 
 	//Camera camera(800, 600, 90, 5, 0.1f);
 	//TestIntegrator integrator;
 
 	//Shape3d box("box.obj");
-	
+
 	//SimpleSampler1D sampler;
 
 	////for now, start casting right away
@@ -55,55 +103,9 @@ int main(int argc, char** argv)
 	//		camera.exposeSensor(i, j, &integrator, &shootme);
 	//	}
 	//}
-
-
-	//generate a bunch of samples and write to an image file to show them.
-	const size_t numSamples = 200;
-	FloatRange xrange(0, 1);
-	FloatRange yrange(0, 1);
-	//RNG stuff, pass into sampler
-	std::tr1::random_device rd;
-	std::tr1::mt19937 mt(rd());
-	//std::tr1::uniform_real_distribution<> distribution(0.0, 1.0);
-	
-	Sampler2D* sampler;
-	
-	sampler = new SimpleSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImage(sampler, "simple");
-	delete sampler;
-
-	sampler = new StratifiedSampler2D(numSamples, &mt, xrange, yrange, 10, 10);
-	generateExampleImage(sampler, "stratified");
-	delete sampler;
-
-	sampler = new LatinHypercubeSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImage(sampler, "latinhypercube");
-	delete sampler;
-
-	sampler = new HaltonSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImage(sampler, "haltonsampler");
-	delete sampler;
-	
-	sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImage(sampler, "hammerslysampler");
-	delete sampler;
-
-	sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImage(sampler, "vandercorputsobolsampler");
-	delete sampler;
-
-	sampler = new DartThresholdSampler2D(numSamples, &mt, xrange, yrange, 0.003f);
-	generateExampleImage(sampler, "dartthresholdsampler");
-	delete sampler;
-
-	sampler = new BestCandidateSampler2D(numSamples, &mt, xrange, yrange, 10);
-	generateExampleImage(sampler, "bestcandidatesampler");
-	delete sampler;
-
-	return 0;
 }
 
-void generateExampleImage(Sampler2D* sampler, string name)
+void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name)
 {
 	const size_t imageoutSideSize = 200;
 	const size_t imageoutISIZE = imageoutSideSize;
