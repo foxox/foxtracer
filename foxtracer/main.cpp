@@ -11,6 +11,8 @@ using namespace std;
 #include "HaltonSampler2D.h"
 #include "HammerslySampler2D.h"
 #include "VanDerCorputSobolSampler2D.h"
+#include "DartThresholdSampler2D.h"
+#include "BestCandidateSampler2D.h"
 
 #include <random>
 
@@ -18,8 +20,6 @@ void generateExampleImage(Sampler2D* sampler, string name);
 
 int main(int argc, char** argv)
 {
-	//cout << "test";
-
 	//Camera, resolution, sensor size diag meters, sensor 
 	//Camera camera(800, 600, 90, 5, 0.1f);
 	//TestIntegrator integrator;
@@ -90,6 +90,14 @@ int main(int argc, char** argv)
 
 	sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
 	generateExampleImage(sampler, "vandercorputsobolsampler");
+	delete sampler;
+
+	sampler = new DartThresholdSampler2D(numSamples, &mt, xrange, yrange, 0.003f);
+	generateExampleImage(sampler, "dartthresholdsampler");
+	delete sampler;
+
+	sampler = new BestCandidateSampler2D(numSamples, &mt, xrange, yrange, 10);
+	generateExampleImage(sampler, "bestcandidatesampler");
 	delete sampler;
 
 	return 0;

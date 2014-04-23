@@ -89,6 +89,9 @@
     <ClInclude Include="DartThresholdSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
+    <ClInclude Include="BestCandidateSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -158,6 +161,9 @@
       <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="DartThresholdSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="BestCandidateSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
   </ItemGroup>

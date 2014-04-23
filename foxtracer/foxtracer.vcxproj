@@ -78,6 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BestCandidateSampler2D.h" />
     <ClInclude Include="DartThresholdSampler2D.h" />
     <ClInclude Include="VanDerCorputSobolSampler2D.h" />
     <ClInclude Include="Camera.h" />
@@ -105,6 +106,7 @@
     <ClInclude Include="TestIntegrator.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BestCandidateSampler2D.cpp" />
     <ClCompile Include="DartThresholdSampler2D.cpp" />
     <ClCompile Include="VanDerCorputSobolSampler2D.cpp" />
     <ClCompile Include="Camera.cpp" />

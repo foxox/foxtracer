@@ -1,25 +1,29 @@
 #pragma once
 #include "sampler2d.h"
-class DartThresholdSampler2D :
+
+#include <map>
+using namespace std;
+
+class BestCandidateSampler2D :
 	public Sampler2D
 {
 protected:
 	Sample2D* samples;
 	size_t samplenum;
-	const float threshold;
-
+	const size_t numCandidates;
+	
 public:
-	DartThresholdSampler2D(void);
-	DartThresholdSampler2D(size_t numSamples,
+	BestCandidateSampler2D(void);
+	BestCandidateSampler2D(size_t numSamples,
 		std::default_random_engine* _pRNGEngine,
-		FloatRange sampleRangeX, FloatRange sampleRangeY, float _threshold)
+		FloatRange sampleRangeX, FloatRange sampleRangeY, size_t _numCandidates)
 		:
 		Sampler2D(numSamples, _pRNGEngine, sampleRangeX, sampleRangeY),
 		samples(new Sample2D[numSamples]),
 		samplenum(0),
-		threshold(_threshold)
+		numCandidates(_numCandidates)
 	{}
-	virtual ~DartThresholdSampler2D(void);
+	virtual ~BestCandidateSampler2D(void);
 
 	virtual Sample2D getNextSample();
 };
