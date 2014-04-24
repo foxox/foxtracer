@@ -30,6 +30,12 @@ public:
 	}
 	virtual ~StratifiedSampler2D(void);
 
+	virtual void reinitialize()
+	{
+		strataposx = 0;
+		strataposy = 0;
+	}
+
 	virtual Sample2D getNextSample();
 };
 

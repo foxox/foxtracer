@@ -13,7 +13,7 @@ namespace FM
 {
 #endif
 
-//#ifndef __cplusplus
+#ifndef __cplusplus
 
 	typedef struct Vec3 Vec3;
 
@@ -39,7 +39,7 @@ namespace FM
 		float mat[4][4];
 	} Mat4;
 
-/*
+
 #else
 
 	struct Vec3
@@ -49,8 +49,8 @@ namespace FM
 		float y;
 		float z;
 
-		//Vec3();
-		//Vec3(float x, float y, float z);
+		Vec3();
+		Vec3(float x, float y, float z);
 	};
 
 	struct Vec4TODO
@@ -70,7 +70,7 @@ namespace FM
 		Mat4();
 	};
 
-#endif*/
+#endif
 
 
 //VEC3 FUNCTIONS
@@ -95,6 +95,7 @@ Mat4 Mat4GenZero();
 Mat4 Mat4GenIdentity();
 
 Mat4 Mat4GenTranslate(float, float, float);
+Mat4 Mat4GenTranslate(const Vec3);
 
 Mat4 Mat4Transpose(Mat4);
 
@@ -113,18 +114,21 @@ Mat4 Mat4GenLookAtTransform(Vec3 pos, Vec3 target, Vec3 up);
 
 //CPP stuff
 
-/*
+
 #ifdef __cplusplus
 
 //Operator overloads
 
-Vec3 operator+(Vec3 a, Vec3 b);
-Vec3 operator-(Vec3 a, Vec3 b);
-float operator*(Vec3 a, Vec3 b);
-Vec3 operator%(Vec3 a, Vec3 b);
+Vec3 operator+(const Vec3 a, const Vec3 b);
+Vec3 operator-(const Vec3 a, const Vec3 b);
+float operator*(const Vec3 a, const Vec3 b);
+Vec3 operator%(const Vec3 a, const Vec3 b);
+
+Vec3 operator*(float a, const Vec3 b);
+Vec3 operator*(const Vec3 a, float b);
 
 #endif
-*/
+
 
 #ifdef __cplusplus
 }

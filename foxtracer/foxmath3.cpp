@@ -6,11 +6,11 @@ using namespace FM;
 
 Vec3 FM::Vec3GenVec3(float x, float y, float z)
 {
-	//#ifdef __cplusplus
-		//Vec3 returnme(x,y,z);
-	//#else
+	#ifdef __cplusplus
+		Vec3 returnme(x,y,z);
+	#else
 		Vec3 returnme = {x,y,z};
-	//#endif
+	#endif
 	return returnme;
 }
 
@@ -114,6 +114,15 @@ Mat4 FM::Mat4GenTranslate(float x, float y, float z)
 	returnme.mat[0][3] = x;
 	returnme.mat[1][3] = y;
 	returnme.mat[2][3] = z;
+	return returnme;
+}
+
+Mat4 FM::Mat4GenTranslate(const Vec3 v)
+{
+	Mat4 returnme = Mat4GenIdentity();
+	returnme.mat[0][3] = v.x;
+	returnme.mat[1][3] = v.y;
+	returnme.mat[2][3] = v.z;
 	return returnme;
 }
 
@@ -231,52 +240,60 @@ Mat4 FM::Mat4GenLookAtTransform(Vec3 pos, Vec3 target, Vec3 up)
 
 
 //CPP additions
-/*
 
-Vec3::Vec3(float x, float y, float z)
+FM::Vec3::Vec3(float x, float y, float z)
 {
 	this->x = x;
 	this->y = y;
 	this->z = z;
 }
 
-Vec3::Vec3()
+FM::Vec3::Vec3()
 {
-	this->x = 0;
-	this->y = 0;
-	this->z = 0;
+	this->x = 0.0f;
+	this->y = 0.0f;
+	this->z = 0.0f;
 }
 
-Mat4::Mat4()
+FM::Mat4::Mat4()
 {
 	Mat4ZeroOut(this);
 }
-*/
+
 
 //Operators
-/*
+
 #ifdef __cplusplus
 
-Vec3 operator+(Vec3 a, Vec3 b)
+Vec3 FM::operator+(const Vec3 a, const Vec3 b)
 {
 	return Vec3(a.x + b.x, a.y + b.y, a.z + b.z);
 }
 
-Vec3 operator-(Vec3 a, Vec3 b)
+Vec3 FM::operator-(const Vec3 a, const Vec3 b)
 {
 	return Vec3(a.x - b.x, a.y - b.y, a.z - b.z);
 }
 
-float operator*(Vec3 a, Vec3 b)
+float FM::operator*(const Vec3 a, const Vec3 b)
 {
 	return a.x * b.x + a.y * b.y + a.z * b.z;
 }
 
-Vec3 operator%(Vec3 a, Vec3 b)
+Vec3 FM::operator%(const Vec3 a, const Vec3 b)
 {
 	return Vec3(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }
 
+Vec3 FM::operator*(float a, const Vec3 b)
+{
+	return Vec3(b.x*a, b.y*a, b.z*a);
+}
+
+Vec3 FM::operator*(const Vec3 a, float b)
+{
+	return Vec3(a.x*b, a.y*b, a.z*b);
+}
+
 #endif
 
-*/

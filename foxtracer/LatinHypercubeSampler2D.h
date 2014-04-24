@@ -27,6 +27,14 @@ public:
 			uniform_real_distribution<float>(0,
 			(sampleRangeY.high - sampleRangeY.low) / static_cast<float>(numSamples));
 
+		reinitialize();
+	}
+	virtual ~LatinHypercubeSampler2D(void);
+
+	virtual void reinitialize()
+	{
+		samplenum = 0;
+
 		//init shuffle
 		for (size_t i = 0; i < numSamples; i++)
 		{
@@ -36,7 +44,7 @@ public:
 
 		//do shuffle
 		//uniform_int_distribution<int> dist;
-		uniform_int_distribution<int> dist(0,numSamples-1);
+		uniform_int_distribution<int> dist(0, numSamples - 1);
 		for (size_t i = 0; i < numSamples; i++)
 		{
 			//size_t newspot = i + (dist(*this->pRNGEngine) % (numSamples - i));	//swap with a higher one
@@ -52,7 +60,6 @@ public:
 			swap(yshuffle[i], yshuffle[newspot]);
 		}
 	}
-	virtual ~LatinHypercubeSampler2D(void);
 
 	virtual Sample2D getNextSample();
 };

@@ -26,6 +26,8 @@ public:
 		RNGDistributionY(sampleRangeY.low, sampleRangeY.high) {}
 	virtual ~Sampler2D(void);
 
+	virtual void reinitialize() = 0;
+
 	virtual Sample2D getNextSample() = 0;
 };
 

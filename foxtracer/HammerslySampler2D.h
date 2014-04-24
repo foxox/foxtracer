@@ -14,9 +14,13 @@ public:
 		FloatRange sampleRangeX, FloatRange sampleRangeY) :
 		Sampler2D(numSamples, _pRNGEngine, sampleRangeX, sampleRangeY),
 		samplenum(0)
-	{
-	}
+	{}
 	virtual ~HammerslySampler2D(void);
+
+	virtual void reinitialize()
+	{
+		samplenum = 0;
+	}
 
 	virtual Sample2D getNextSample();
 };

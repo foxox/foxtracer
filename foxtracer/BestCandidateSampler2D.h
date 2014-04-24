@@ -8,7 +8,7 @@ class BestCandidateSampler2D :
 	public Sampler2D
 {
 protected:
-	Sample2D* samples;
+	Sample2D* const samples;
 	size_t samplenum;
 	const size_t numCandidates;
 	
@@ -24,6 +24,10 @@ public:
 		numCandidates(_numCandidates)
 	{}
 	virtual ~BestCandidateSampler2D(void);
+	virtual void reinitialize()
+	{
+		this->samplenum = 0;
+	}
 
 	virtual Sample2D getNextSample();
 };
