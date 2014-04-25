@@ -14,16 +14,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Integrator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Ray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Screen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Shape3d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
@@ -32,19 +23,7 @@
     <ClInclude Include="foxmath3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SGNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RaycastIntegrator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TestIntegrator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="common.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Quantum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FloatRange.h">
@@ -100,28 +79,10 @@
     <ClCompile Include="Ray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Screen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Shape3d.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="foxmath3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SGNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RaycastIntegrator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TestIntegrator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Quantum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sample1D.cpp">

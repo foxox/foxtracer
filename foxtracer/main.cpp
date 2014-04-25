@@ -1,10 +1,8 @@
 #include <iostream>
 using namespace std;
 
-#include "Screen.h"
-#include "TestIntegrator.h"
-#include "Shape3d.h"
 #include "Camera.h"
+
 #include "SimpleSampler2D.h"
 #include "StratifiedSampler2D.h"
 #include "LatinHypercubeSampler2D.h"
@@ -113,9 +111,6 @@ int main(int argc, char** argv)
 	generateExampleImageInfiniteCheckers(sampler, "BestCandidateSampler2D");
 	delete sampler;
 
-
-
-	//Infinite checker examples
 
 	return 0;
 }
@@ -255,13 +250,8 @@ void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name)
 	{
 		Sample2D samp = sampler->getNextSample();
 
-		//samp.x = static_cast<float>(distribution(mt));
-		//samp.y = static_cast<float>(distribution(mt));
-
 		size_t x = static_cast<size_t>(samp.x * static_cast<float>(imageoutISIZE));
 		size_t y = static_cast<size_t>(samp.y * static_cast<float>(imageoutJSIZE));
-
-		//cout << x << "," << y << endl;
 
 		i3(imageout, y, x, 0) = 0;
 		i3(imageout, y, x, 1) = 0;

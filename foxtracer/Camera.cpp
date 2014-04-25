@@ -26,9 +26,3 @@ Ray Camera::getRay(const Sample2D& filmloc, const Sample2D& aperture)
 
 	return Ray(senspos,direction);
 }
-
-
-void Camera::exposeSensor(size_t i, size_t j, Integrator* integrator, Ray* theray)
-{
-	i2(this->sensor, i, j);
-}

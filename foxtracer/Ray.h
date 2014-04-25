@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Shape3d.h"
+#include "foxmath3.h"
+using namespace FM;
 
 class Ray
 {
@@ -22,15 +23,4 @@ public:
 	{
 		return this->origin + time * this->direction;
 	}
-};
-
-class Intersection
-{
-public:
-	Shape3d* shape;
-	uint faceIndex;
-
-	Ray* incomingRay;
-
-	Intersection(Ray* _incomingRay, Shape3d* _shape, uint _faceIndex);
 };
