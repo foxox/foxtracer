@@ -38,9 +38,6 @@
     <ClInclude Include="LatinHypercubeSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleSampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
     <ClInclude Include="StratifiedSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
@@ -80,6 +77,9 @@
     <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SimpleSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -89,9 +89,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LatinHypercubeSampler2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="StratifiedSampler2D.cpp">
@@ -135,6 +132,9 @@
     </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSampler2D.cpp">
+      <Filter>Samplers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

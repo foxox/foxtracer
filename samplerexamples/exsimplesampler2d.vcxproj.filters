@@ -17,12 +17,10 @@
     <ClCompile Include="..\foxtracer\Sampler2D.cpp">
       <Filter>From Foxtracer</Filter>
     </ClCompile>
-    <ClCompile Include="..\foxtracer\SimpleSampler2D.cpp">
-      <Filter>From Foxtracer</Filter>
-    </ClCompile>
     <ClCompile Include="ExamplePinholeCamera.cpp">
       <Filter>Example Common</Filter>
     </ClCompile>
+    <ClCompile Include="..\foxtracer\SimpleSampler2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\foxtracer\foxmath3.h">
@@ -40,15 +38,13 @@
     <ClInclude Include="..\foxtracer\Sampler2D.h">
       <Filter>From Foxtracer</Filter>
     </ClInclude>
-    <ClInclude Include="..\foxtracer\SimpleSampler2D.h">
-      <Filter>From Foxtracer</Filter>
-    </ClInclude>
     <ClInclude Include="ExamplePinholeCamera.h">
       <Filter>Example Common</Filter>
     </ClInclude>
     <ClInclude Include="PixelSampleExampleGenerators.h">
       <Filter>Example Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\foxtracer\SimpleSampler2D.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="From Foxtracer">

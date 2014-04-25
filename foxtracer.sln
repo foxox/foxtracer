@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{59
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExTemplate", "samplerexamples\extemplate.vcxproj", "{4996FF63-1349-4DC3-B288-DEBFF23C36EC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExStratifiedSampler2D", "samplerexamples\exstratifiedsampler2d.vcxproj", "{2C58AB76-D738-4F4A-8376-BB11F6ED79A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -47,6 +49,12 @@ Global
 		{4996FF63-1349-4DC3-B288-DEBFF23C36EC}.Release|Win32.ActiveCfg = Release|Win32
 		{4996FF63-1349-4DC3-B288-DEBFF23C36EC}.Release|Win32.Build.0 = Release|Win32
 		{4996FF63-1349-4DC3-B288-DEBFF23C36EC}.Release|x64.ActiveCfg = Release|Win32
+		{2C58AB76-D738-4F4A-8376-BB11F6ED79A0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2C58AB76-D738-4F4A-8376-BB11F6ED79A0}.Debug|Win32.Build.0 = Debug|Win32
+		{2C58AB76-D738-4F4A-8376-BB11F6ED79A0}.Debug|x64.ActiveCfg = Debug|Win32
+		{2C58AB76-D738-4F4A-8376-BB11F6ED79A0}.Release|Win32.ActiveCfg = Release|Win32
+		{2C58AB76-D738-4F4A-8376-BB11F6ED79A0}.Release|Win32.Build.0 = Release|Win32
+		{2C58AB76-D738-4F4A-8376-BB11F6ED79A0}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +62,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3BA9F64F-DFF7-46E2-8E82-C2E89E308503} = {59A99E52-FE51-4998-B0F3-4E7EB16C2E00}
 		{4996FF63-1349-4DC3-B288-DEBFF23C36EC} = {59A99E52-FE51-4998-B0F3-4E7EB16C2E00}
+		{2C58AB76-D738-4F4A-8376-BB11F6ED79A0} = {59A99E52-FE51-4998-B0F3-4E7EB16C2E00}
 	EndGlobalSection
 EndGlobal

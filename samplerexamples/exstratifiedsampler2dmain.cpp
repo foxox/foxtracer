@@ -3,7 +3,7 @@ using namespace std;
 
 #include "PixelSampleExampleGenerators.h"
 
-#include "SimpleSampler2D.h"
+#include "StratifiedSampler2D.h"
 
 #include <random>
 
@@ -22,8 +22,8 @@ int main(int argc, char** argv)
 	
 	//2D GRID
 
-	sampler = new SimpleSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImage2DSampleGrid(sampler, "SimpleSampler2D");
+	sampler = new StratifiedSampler2D(numSamples, &mt, xrange, yrange, 16, 16);
+	generateExampleImage2DSampleGrid(sampler, "StratifiedSampler2D");
 	delete sampler;
 
 
@@ -31,10 +31,11 @@ int main(int argc, char** argv)
 
 	numSamples = 4;
 
-	sampler = new SimpleSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImageInfiniteCheckers(sampler, "SimpleSampler2D");
+	sampler = new StratifiedSampler2D(numSamples, &mt, xrange, yrange,
+		static_cast<size_t>(sqrtf(static_cast<float>(numSamples))),
+		static_cast<size_t>(sqrtf(static_cast<float>(numSamples))));
+	generateExampleImageInfiniteCheckers(sampler, "StratifiedSampler2D");
 	delete sampler;
-
 
 	return 0;
 }
