@@ -32,7 +32,7 @@ int main(int argc, char** argv)
 	
 	Sampler2D* sampler;
 	
-	////2D GRID
+	//2D GRID
 
 	sampler = new SimpleSampler2D(numSamples, &mt, xrange, yrange);
 	generateExampleImage2DSampleGrid(sampler, "SimpleSampler2D");
