@@ -12,14 +12,17 @@
     <Filter Include="Samplers">
       <UniqueIdentifier>{e64172b4-1516-49dd-ae18-37d4d399f8b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Samplers\Samples">
+      <UniqueIdentifier>{e99f7767-4306-4512-ba54-d3ce468f8147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samplers\Bases">
+      <UniqueIdentifier>{7ae27a05-57bf-4894-ad8f-7b1c202fa120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samplers\1D Samplers">
+      <UniqueIdentifier>{40cc7bae-e8fc-49ae-a2c7-b87861611bd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Ray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="foxmath3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -29,22 +32,10 @@
     <ClInclude Include="FloatRange.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sampler2D.h">
+    <ClInclude Include="HammerslySampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
-    <ClInclude Include="Sample1D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="Sample2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="Sampler.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="Sampler1D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="SimpleSampler1D.h">
+    <ClInclude Include="LatinHypercubeSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
     <ClInclude Include="SimpleSampler2D.h">
@@ -53,54 +44,51 @@
     <ClInclude Include="StratifiedSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
-    <ClInclude Include="LatinHypercubeSampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="HaltonSampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="HammerslySampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
     <ClInclude Include="VanDerCorputSobolSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="BestCandidateSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
     <ClInclude Include="DartThresholdSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
-    <ClInclude Include="BestCandidateSampler2D.h">
+    <ClInclude Include="HaltonSampler2D.h">
       <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample1D.h">
+      <Filter>Samplers\Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample2D.h">
+      <Filter>Samplers\Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="Sampler.h">
+      <Filter>Samplers\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Sampler1D.h">
+      <Filter>Samplers\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Sampler2D.h">
+      <Filter>Samplers\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleSampler1D.h">
+      <Filter>Samplers\1D Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="foxmath3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sample1D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="Sample2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="Sampler.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="Sampler1D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="Sampler2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleSampler1D.cpp">
+    <ClCompile Include="LatinHypercubeSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="SimpleSampler2D.cpp">
@@ -109,7 +97,13 @@
     <ClCompile Include="StratifiedSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
-    <ClCompile Include="LatinHypercubeSampler2D.cpp">
+    <ClCompile Include="VanDerCorputSobolSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="BestCandidateSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="DartThresholdSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="HaltonSampler2D.cpp">
@@ -118,14 +112,29 @@
     <ClCompile Include="HammerslySampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
-    <ClCompile Include="VanDerCorputSobolSampler2D.cpp">
-      <Filter>Samplers</Filter>
+    <ClCompile Include="Sample1D.cpp">
+      <Filter>Samplers\Samples</Filter>
     </ClCompile>
-    <ClCompile Include="DartThresholdSampler2D.cpp">
-      <Filter>Samplers</Filter>
+    <ClCompile Include="Sample2D.cpp">
+      <Filter>Samplers\Samples</Filter>
     </ClCompile>
-    <ClCompile Include="BestCandidateSampler2D.cpp">
-      <Filter>Samplers</Filter>
+    <ClCompile Include="Sampler.cpp">
+      <Filter>Samplers\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="Sampler1D.cpp">
+      <Filter>Samplers\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="Sampler2D.cpp">
+      <Filter>Samplers\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSampler1D.cpp">
+      <Filter>Samplers\1D Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

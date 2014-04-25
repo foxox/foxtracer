@@ -10,10 +10,33 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\foxtracer\Camera.cpp" />
+    <ClCompile Include="..\foxtracer\ExamplePinholeCamera.cpp" />
+    <ClCompile Include="..\foxtracer\foxmath3.cpp" />
+    <ClCompile Include="..\foxtracer\Ray.cpp" />
+    <ClCompile Include="..\foxtracer\Sample2D.cpp" />
+    <ClCompile Include="..\foxtracer\Sampler.cpp" />
+    <ClCompile Include="..\foxtracer\Sampler2D.cpp" />
+    <ClCompile Include="..\foxtracer\SimpleSampler2D.cpp" />
+    <ClCompile Include="exsimplesampler2dmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\foxtracer\Camera.h" />
+    <ClInclude Include="..\foxtracer\ExamplePinholeCamera.h" />
+    <ClInclude Include="..\foxtracer\foxmath3.h" />
+    <ClInclude Include="..\foxtracer\Ray.h" />
+    <ClInclude Include="..\foxtracer\Sample2D.h" />
+    <ClInclude Include="..\foxtracer\Sampler.h" />
+    <ClInclude Include="..\foxtracer\Sampler2D.h" />
+    <ClInclude Include="..\foxtracer\SimpleSampler2D.h" />
+    <ClInclude Include="PixelSampleExampleGenerators.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FDB7EB4C-4116-4066-9EF9-A1015E82D61F}</ProjectGuid>
+    <ProjectGuid>{3BA9F64F-DFF7-46E2-8E82-C2E89E308503}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>foxtracer</RootNamespace>
+    <ProjectName>ExSimpleSampler2D</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -50,6 +73,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../foxtracer/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -67,6 +91,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../foxtracer/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,50 +102,6 @@
       <AdditionalLibraryDirectories>$(OutDir)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="BestCandidateSampler2D.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="common.h" />
-    <ClInclude Include="DartThresholdSampler2D.h" />
-    <ClInclude Include="foxmath3.h" />
-    <ClInclude Include="FloatRange.h" />
-    <ClInclude Include="HaltonSampler2D.h" />
-    <ClInclude Include="HammerslySampler2D.h" />
-    <ClInclude Include="LatinHypercubeSampler2D.h" />
-    <ClInclude Include="Ray.h" />
-    <ClInclude Include="Sample1D.h" />
-    <ClInclude Include="Sample2D.h" />
-    <ClInclude Include="Sampler.h" />
-    <ClInclude Include="Sampler1D.h" />
-    <ClInclude Include="Sampler2D.h" />
-    <ClInclude Include="SimpleSampler1D.h" />
-    <ClInclude Include="SimpleSampler2D.h" />
-    <ClInclude Include="StratifiedSampler2D.h" />
-    <ClInclude Include="VanDerCorputSobolSampler2D.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="BestCandidateSampler2D.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="DartThresholdSampler2D.cpp" />
-    <ClCompile Include="foxmath3.cpp" />
-    <ClCompile Include="HaltonSampler2D.cpp" />
-    <ClCompile Include="HammerslySampler2D.cpp" />
-    <ClCompile Include="LatinHypercubeSampler2D.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Ray.cpp" />
-    <ClCompile Include="Sample1D.cpp" />
-    <ClCompile Include="Sample2D.cpp" />
-    <ClCompile Include="Sampler.cpp" />
-    <ClCompile Include="Sampler1D.cpp" />
-    <ClCompile Include="Sampler2D.cpp" />
-    <ClCompile Include="SimpleSampler1D.cpp" />
-    <ClCompile Include="SimpleSampler2D.cpp" />
-    <ClCompile Include="StratifiedSampler2D.cpp" />
-    <ClCompile Include="VanDerCorputSobolSampler2D.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="notes.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
