@@ -18,7 +18,6 @@
     <ClCompile Include="..\foxtracer\Sampler2D.cpp" />
     <ClCompile Include="..\foxtracer\SimpleSampler2D.cpp" />
     <ClCompile Include="ExamplePinholeCamera.cpp" />
-    <ClCompile Include="exsimplesampler2dmain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\foxtracer\foxmath3.h" />
@@ -31,10 +30,10 @@
     <ClInclude Include="PixelSampleExampleGenerators.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3BA9F64F-DFF7-46E2-8E82-C2E89E308503}</ProjectGuid>
+    <ProjectGuid>{4996FF63-1349-4DC3-B288-DEBFF23C36EC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>foxtracer</RootNamespace>
-    <ProjectName>ExSimpleSampler2D</ProjectName>
+    <ProjectName>ExTemplate</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

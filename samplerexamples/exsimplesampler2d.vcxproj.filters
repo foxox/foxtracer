@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="exsimplesampler2dmain.cpp" />
+    <ClCompile Include="..\foxtracer\foxmath3.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\Ray.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\Sample2D.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\Sampler.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\Sampler2D.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\SimpleSampler2D.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="ExamplePinholeCamera.cpp">
+      <Filter>Example Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\foxtracer\foxmath3.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\Ray.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\Sample2D.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\Sampler.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\Sampler2D.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\SimpleSampler2D.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="ExamplePinholeCamera.h">
+      <Filter>Example Common</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelSampleExampleGenerators.h">
+      <Filter>Example Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="From Foxtracer">
+      <UniqueIdentifier>{cf3064c1-2985-4aa5-947e-887493e31099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example Common">
+      <UniqueIdentifier>{f224a511-25b8-4987-9908-c34283784e30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
