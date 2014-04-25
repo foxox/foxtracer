@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foxtracer", "foxtracer\foxt
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageIO", "ImageIO\ImageIO.vcxproj", "{1AC54B5C-DA9F-485A-AF21-F8540ABA1D82}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExSimpleSampler2D", "exsimplesampler2d\exsimplesampler2d.vcxproj", "{3BA9F64F-DFF7-46E2-8E82-C2E89E308503}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExSimpleSampler2D", "samplerexamples\exsimplesampler2d.vcxproj", "{3BA9F64F-DFF7-46E2-8E82-C2E89E308503}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
