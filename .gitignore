@@ -51,3 +51,6 @@ ImageIO/Release/
 *.manifest
 *.lastbuildstate
 *.unsuccessfulbuild
+*.rc
+*.res
+
