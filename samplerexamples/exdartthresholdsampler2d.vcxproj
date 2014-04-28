@@ -11,14 +11,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\foxtracer\DartThresholdSampler2D.cpp" />
     <ClCompile Include="..\foxtracer\foxmath3.cpp" />
     <ClCompile Include="..\foxtracer\Ray.cpp" />
     <ClCompile Include="..\foxtracer\Sample2D.cpp" />
     <ClCompile Include="..\foxtracer\Sampler.cpp" />
     <ClCompile Include="..\foxtracer\Sampler2D.cpp" />
     <ClCompile Include="ExamplePinholeCamera.cpp" />
+    <ClCompile Include="exdartthresholdsampler2dmain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\foxtracer\DartThresholdSampler2D.h" />
     <ClInclude Include="..\foxtracer\foxmath3.h" />
     <ClInclude Include="..\foxtracer\Ray.h" />
     <ClInclude Include="..\foxtracer\Sample2D.h" />
@@ -28,10 +31,10 @@
     <ClInclude Include="PixelSampleExampleGenerators.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4996FF63-1349-4DC3-B288-DEBFF23C36EC}</ProjectGuid>
+    <ProjectGuid>{BDDC1603-9336-4E5B-BF94-1B7C5AA1BDE1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>foxtracer</RootNamespace>
-    <ProjectName>ExTemplate</ProjectName>
+    <ProjectName>ExDartThresholdSampler2D</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

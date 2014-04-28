@@ -27,6 +27,8 @@
     <ClCompile Include="..\foxtracer\Sampler2D.cpp">
       <Filter>From Foxtracer</Filter>
     </ClCompile>
+    <ClCompile Include="exbestcandidatesampler2dmain.cpp" />
+    <ClCompile Include="..\foxtracer\BestCandidateSampler2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExamplePinholeCamera.h">
@@ -50,5 +52,6 @@
     <ClInclude Include="..\foxtracer\Sampler2D.h">
       <Filter>From Foxtracer</Filter>
     </ClInclude>
+    <ClInclude Include="..\foxtracer\BestCandidateSampler2D.h" />
   </ItemGroup>
 </Project>
