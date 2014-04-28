@@ -1,11 +1,24 @@
 #pragma once
 
+#ifndef FOXTRACERFOLDER
+
+#include "../foxtracer/foxmath3.h"
+#include "../foxtracer/common.h"
+
+#include "../foxtracer/Ray.h"
+
+#include "../foxtracer/Sample2D.h"
+
+#else
+
 #include "foxmath3.h"
 #include "common.h"
 
 #include "Ray.h"
 
 #include "Sample2D.h"
+
+#endif
 
 using namespace FM;
 
