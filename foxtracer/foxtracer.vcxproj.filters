@@ -92,6 +92,15 @@
     <ClInclude Include="BestCandidateSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
+    <ClInclude Include="VanDerCorputSobolScrambledSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="HaltonScrambledSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="HammerslyScrambledSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -164,6 +173,15 @@
       <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="BestCandidateSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="HaltonScrambledSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="HammerslyScrambledSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="VanDerCorputSobolScrambledSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
   </ItemGroup>

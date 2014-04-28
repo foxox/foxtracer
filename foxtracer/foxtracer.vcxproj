@@ -80,6 +80,8 @@
   <ItemGroup>
     <ClInclude Include="BestCandidateSampler2D.h" />
     <ClInclude Include="DartThresholdSampler2D.h" />
+    <ClInclude Include="HaltonScrambledSampler2D.h" />
+    <ClInclude Include="HammerslyScrambledSampler2D.h" />
     <ClInclude Include="VanDerCorputSobolSampler2D.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="common.h" />
@@ -104,10 +106,13 @@
     <ClInclude Include="SimpleSampler2D.h" />
     <ClInclude Include="StratifiedSampler2D.h" />
     <ClInclude Include="TestIntegrator.h" />
+    <ClInclude Include="VanDerCorputSobolScrambledSampler2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BestCandidateSampler2D.cpp" />
     <ClCompile Include="DartThresholdSampler2D.cpp" />
+    <ClCompile Include="HaltonScrambledSampler2D.cpp" />
+    <ClCompile Include="HammerslyScrambledSampler2D.cpp" />
     <ClCompile Include="VanDerCorputSobolSampler2D.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="foxmath3.cpp" />
@@ -130,6 +135,7 @@
     <ClCompile Include="SimpleSampler2D.cpp" />
     <ClCompile Include="StratifiedSampler2D.cpp" />
     <ClCompile Include="TestIntegrator.cpp" />
+    <ClCompile Include="VanDerCorputSobolScrambledSampler2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="notes.txt" />
