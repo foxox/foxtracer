@@ -53,4 +53,4 @@ ImageIO/Release/
 *.unsuccessfulbuild
 *.rc
 *.res
-
+*.idb
