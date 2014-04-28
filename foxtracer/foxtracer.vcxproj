@@ -78,6 +78,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\samplerexamples\ExamplePinholeCamera.h" />
+    <ClInclude Include="..\samplerexamples\PixelSampleExampleGenerators.h" />
     <ClInclude Include="BestCandidateSampler2D.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="common.h" />
@@ -85,7 +87,9 @@
     <ClInclude Include="foxmath3.h" />
     <ClInclude Include="FloatRange.h" />
     <ClInclude Include="HaltonSampler2D.h" />
+    <ClInclude Include="HaltonScrambledSampler2D.h" />
     <ClInclude Include="HammerslySampler2D.h" />
+    <ClInclude Include="HammerslyScrambledSampler2D.h" />
     <ClInclude Include="LatinHypercubeSampler2D.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="Sample1D.h" />
@@ -97,14 +101,18 @@
     <ClInclude Include="SimpleSampler2D.h" />
     <ClInclude Include="StratifiedSampler2D.h" />
     <ClInclude Include="VanDerCorputSobolSampler2D.h" />
+    <ClInclude Include="VanDerCorputSobolScrambledSampler2D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\samplerexamples\ExamplePinholeCamera.cpp" />
     <ClCompile Include="BestCandidateSampler2D.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="DartThresholdSampler2D.cpp" />
     <ClCompile Include="foxmath3.cpp" />
     <ClCompile Include="HaltonSampler2D.cpp" />
+    <ClCompile Include="HaltonScrambledSampler2D.cpp" />
     <ClCompile Include="HammerslySampler2D.cpp" />
+    <ClCompile Include="HammerslyScrambledSampler2D.cpp" />
     <ClCompile Include="LatinHypercubeSampler2D.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Ray.cpp" />
@@ -117,6 +125,7 @@
     <ClCompile Include="SimpleSampler2D.cpp" />
     <ClCompile Include="StratifiedSampler2D.cpp" />
     <ClCompile Include="VanDerCorputSobolSampler2D.cpp" />
+    <ClCompile Include="VanDerCorputSobolScrambledSampler2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="notes.txt" />

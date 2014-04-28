@@ -14,6 +14,7 @@ using namespace std;
 
 #include "HaltonScrambledSampler2D.h"
 #include "HammerslyScrambledSampler2D.h"
+#include "VanDerCorputSobolScrambledSampler2D.h"
 
 
 #define FOXTRACERFOLDER
@@ -54,15 +55,16 @@ int main(int argc, char** argv)
 	//generateExampleImage2DSampleGrid(sampler, "HaltonSampler2D");
 	//delete sampler;
 
-	//unscrambled
-	sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImage2DSampleGrid(sampler, "HammerslySampler2D");
+	////unscrambled
+	//sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
+	//generateExampleImage2DSampleGrid(sampler, "HammerslySampler2D");
+	//delete sampler;
+
+	//0,2 sequence
+	sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage2DSampleGrid(sampler, "VanDerCorputSobolSampler2D");
 	delete sampler;
 
-	////0,2 sequence
-	//sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
-	//generateExampleImage2DSampleGrid(sampler, "VanDerCorputSobolSampler2D");
-	//delete sampler;
 	////failed samples go to 0,0 (reduce threshold or sample count)
 	//sampler = new DartThresholdSampler2D(numSamples, &mt, xrange, yrange, 0.002f);
 	//generateExampleImage2DSampleGrid(sampler, "DartThresholdSampler2D");
@@ -76,9 +78,16 @@ int main(int argc, char** argv)
 	//generateExampleImage2DSampleGrid(sampler, "HaltonScrambledSampler2D");
 	//delete sampler;
 
-	sampler = new HammerslyScrambledSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImage2DSampleGrid(sampler, "HammerslyScrambledSampler2D");
+	//sampler = new HammerslyScrambledSampler2D(numSamples, &mt, xrange, yrange);
+	//generateExampleImage2DSampleGrid(sampler, "HammerslyScrambledSampler2D");
+	//delete sampler;
+
+	sampler = new VanDerCorputSobolScrambledSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImage2DSampleGrid(sampler, "VanDerCorputSobolScrambledSampler2D");
 	delete sampler;
+
+
+
 
 
 	//CHECKERS
@@ -102,15 +111,16 @@ int main(int argc, char** argv)
 	//generateExampleImageInfiniteCheckers(sampler, "HaltonSampler2D");
 	//delete sampler;
 
-	//unscrambled
-	sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImageInfiniteCheckers(sampler, "HammerslySampler2D");
+	////unscrambled
+	//sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
+	//generateExampleImageInfiniteCheckers(sampler, "HammerslySampler2D");
+	//delete sampler;
+
+	//0,2 sequence
+	sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImageInfiniteCheckers(sampler, "VanDerCorputSobolSampler2D");
 	delete sampler;
 
-	////0,2 sequence
-	//sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
-	//generateExampleImageInfiniteCheckers(sampler, "VanDerCorputSobolSampler2D");
-	//delete sampler;
 	////failed samples go to 0,0 (reduce threshold or sample count)
 	//sampler = new DartThresholdSampler2D(numSamples, &mt, xrange, yrange, 0.7f * (xrange.high-xrange.low) / sqrt(static_cast<float>(numSamples)));
 	//generateExampleImageInfiniteCheckers(sampler, "DartThresholdSampler2D");
@@ -124,8 +134,12 @@ int main(int argc, char** argv)
 	//generateExampleImageInfiniteCheckers(sampler, "HaltonScrambledSampler2D");
 	//delete sampler;
 
-	sampler = new HammerslyScrambledSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImageInfiniteCheckers(sampler, "HammerslyScrambledSampler2D");
+	//sampler = new HammerslyScrambledSampler2D(numSamples, &mt, xrange, yrange);
+	//generateExampleImageInfiniteCheckers(sampler, "HammerslyScrambledSampler2D");
+	//delete sampler;
+
+	sampler = new VanDerCorputSobolScrambledSampler2D(numSamples, &mt, xrange, yrange);
+	generateExampleImageInfiniteCheckers(sampler, "VanDerCorputSobolScrambledSampler2D");
 	delete sampler;
 
 

@@ -32,25 +32,7 @@
     <ClInclude Include="FloatRange.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HammerslySampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="LatinHypercubeSampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
     <ClInclude Include="StratifiedSampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="VanDerCorputSobolSampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="BestCandidateSampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="DartThresholdSampler2D.h">
-      <Filter>Samplers</Filter>
-    </ClInclude>
-    <ClInclude Include="HaltonSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
     <ClInclude Include="Sample1D.h">
@@ -80,6 +62,35 @@
     <ClInclude Include="SimpleSampler2D.h">
       <Filter>Samplers</Filter>
     </ClInclude>
+    <ClInclude Include="HaltonScrambledSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="VanDerCorputSobolSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="BestCandidateSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="DartThresholdSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="HaltonSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="HammerslySampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="LatinHypercubeSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\samplerexamples\PixelSampleExampleGenerators.h" />
+    <ClInclude Include="..\samplerexamples\ExamplePinholeCamera.h" />
+    <ClInclude Include="HammerslyScrambledSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="VanDerCorputSobolScrambledSampler2D.h">
+      <Filter>Samplers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -88,25 +99,7 @@
     <ClCompile Include="foxmath3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LatinHypercubeSampler2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
     <ClCompile Include="StratifiedSampler2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="VanDerCorputSobolSampler2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="BestCandidateSampler2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="DartThresholdSampler2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="HaltonSampler2D.cpp">
-      <Filter>Samplers</Filter>
-    </ClCompile>
-    <ClCompile Include="HammerslySampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
     <ClCompile Include="Sample1D.cpp">
@@ -134,6 +127,34 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SimpleSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="HaltonScrambledSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="VanDerCorputSobolSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="BestCandidateSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="DartThresholdSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="HaltonSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="HammerslySampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="LatinHypercubeSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\samplerexamples\ExamplePinholeCamera.cpp" />
+    <ClCompile Include="HammerslyScrambledSampler2D.cpp">
+      <Filter>Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="VanDerCorputSobolScrambledSampler2D.cpp">
       <Filter>Samplers</Filter>
     </ClCompile>
   </ItemGroup>
