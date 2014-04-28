@@ -1,5 +1,5 @@
 #pragma once
-#include "sampler2d.h"
+#include "Sampler2D.h"
 
 class HaltonSampler2D :
 	public Sampler2D
