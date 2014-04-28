@@ -1,5 +1,5 @@
 #pragma once
-//#include "Sampler2d.h"
+//#include "Sampler2D.h"
 #include "HaltonScrambledSampler2D.h"
 
 class HammerslyScrambledSampler2D:
