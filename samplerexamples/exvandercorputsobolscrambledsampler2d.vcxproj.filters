@@ -27,7 +27,9 @@
     <ClCompile Include="..\foxtracer\Sampler2D.cpp">
       <Filter>From Foxtracer</Filter>
     </ClCompile>
-    <ClCompile Include="extemplatemain.cpp" />
+    <ClCompile Include="exvandercorputsobolscrambledsampler2dmain.cpp" />
+    <ClCompile Include="..\foxtracer\VanDerCorputSobolScrambledSampler2D.cpp" />
+    <ClCompile Include="..\foxtracer\VanDerCorputSobolSampler2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExamplePinholeCamera.h">
@@ -51,5 +53,7 @@
     <ClInclude Include="..\foxtracer\Sampler2D.h">
       <Filter>From Foxtracer</Filter>
     </ClInclude>
+    <ClInclude Include="..\foxtracer\VanDerCorputSobolScrambledSampler2D.h" />
+    <ClInclude Include="..\foxtracer\VanDerCorputSobolSampler2D.h" />
   </ItemGroup>
 </Project>

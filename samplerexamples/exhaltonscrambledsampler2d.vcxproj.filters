@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Example Common">
+      <UniqueIdentifier>{dc88d0e4-3873-459f-bc4e-29122786cb72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="From Foxtracer">
+      <UniqueIdentifier>{68699c25-031d-4aa9-ac2d-ceaaf31eae4f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ExamplePinholeCamera.cpp">
+      <Filter>Example Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\foxmath3.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\Ray.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\Sample2D.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\Sampler.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foxtracer\Sampler2D.cpp">
+      <Filter>From Foxtracer</Filter>
+    </ClCompile>
+    <ClCompile Include="exhaltonscrambledsampler2dmain.cpp" />
+    <ClCompile Include="..\foxtracer\HaltonScrambledSampler2D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExamplePinholeCamera.h">
+      <Filter>Example Common</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelSampleExampleGenerators.h">
+      <Filter>Example Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\foxmath3.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\Ray.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\Sample2D.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\Sampler.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\Sampler2D.h">
+      <Filter>From Foxtracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foxtracer\HaltonScrambledSampler2D.h" />
+  </ItemGroup>
+</Project>
