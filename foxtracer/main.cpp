@@ -22,8 +22,8 @@ using namespace std;
 
 #include <random>
 
-void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name);
-void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name);
+//void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name);
+//void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name);
 
 int main(int argc, char** argv)
 {
@@ -35,6 +35,7 @@ int main(int argc, char** argv)
 	std::tr1::random_device rd;
 	std::tr1::mt19937 mt(rd());
 	//std::tr1::uniform_real_distribution<> distribution(0.0, 1.0);
+	float u, v;
 	
 	Sampler2D* sampler;
 	
@@ -118,7 +119,7 @@ int main(int argc, char** argv)
 
 	//0,2 sequence
 	sampler = new VanDerCorputSobolSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImageInfiniteCheckers(sampler, "VanDerCorputSobolSampler2D");
+	generateExampleImageInfiniteCheckers(sampler, "VanDerCorputSobolSampler2D", &u, &v);
 	delete sampler;
 
 	////failed samples go to 0,0 (reduce threshold or sample count)
@@ -139,7 +140,7 @@ int main(int argc, char** argv)
 	//delete sampler;
 
 	sampler = new VanDerCorputSobolScrambledSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImageInfiniteCheckers(sampler, "VanDerCorputSobolScrambledSampler2D");
+	generateExampleImageInfiniteCheckers(sampler, "VanDerCorputSobolScrambledSampler2D", &u, &v);
 	delete sampler;
 
 

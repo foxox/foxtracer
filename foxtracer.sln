@@ -33,6 +33,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExHammerslyScrambledSampler
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExVanDerCorputSobolScrambledSampler2D", "samplerexamples\exvandercorputsobolscrambledsampler2d.vcxproj", "{DBDE5FA3-B14B-490E-8E98-93B3EBE9FEDB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExTemplate", "samplerexamples\exadaptivesampler2d.vcxproj", "{3CE5AC4D-F039-432A-8E23-9C73776211FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -127,6 +129,12 @@ Global
 		{DBDE5FA3-B14B-490E-8E98-93B3EBE9FEDB}.Release|Win32.ActiveCfg = Release|Win32
 		{DBDE5FA3-B14B-490E-8E98-93B3EBE9FEDB}.Release|Win32.Build.0 = Release|Win32
 		{DBDE5FA3-B14B-490E-8E98-93B3EBE9FEDB}.Release|x64.ActiveCfg = Release|Win32
+		{3CE5AC4D-F039-432A-8E23-9C73776211FD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3CE5AC4D-F039-432A-8E23-9C73776211FD}.Debug|Win32.Build.0 = Debug|Win32
+		{3CE5AC4D-F039-432A-8E23-9C73776211FD}.Debug|x64.ActiveCfg = Debug|Win32
+		{3CE5AC4D-F039-432A-8E23-9C73776211FD}.Release|Win32.ActiveCfg = Release|Win32
+		{3CE5AC4D-F039-432A-8E23-9C73776211FD}.Release|Win32.Build.0 = Release|Win32
+		{3CE5AC4D-F039-432A-8E23-9C73776211FD}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,5 +152,6 @@ Global
 		{A774D2AD-80B2-4EAD-8A50-BEA126A57104} = {59A99E52-FE51-4998-B0F3-4E7EB16C2E00}
 		{AE8B2939-D4DC-4C5F-90E7-6FFCF65B1898} = {59A99E52-FE51-4998-B0F3-4E7EB16C2E00}
 		{DBDE5FA3-B14B-490E-8E98-93B3EBE9FEDB} = {59A99E52-FE51-4998-B0F3-4E7EB16C2E00}
+		{3CE5AC4D-F039-432A-8E23-9C73776211FD} = {59A99E52-FE51-4998-B0F3-4E7EB16C2E00}
 	EndGlobalSection
 EndGlobal

@@ -17,6 +17,7 @@ int main(int argc, char** argv)
 	std::tr1::random_device rd;
 	std::tr1::mt19937 mt(rd());
 	//std::tr1::uniform_real_distribution<> distribution(0.0, 1.0);
+	float u, v;
 	
 	Sampler2D* sampler;
 	
@@ -34,7 +35,7 @@ int main(int argc, char** argv)
 
 	//unscrambled
 	sampler = new HammerslySampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImageInfiniteCheckers(sampler, "HammerslySampler2D");
+	generateExampleImageInfiniteCheckers(sampler, "HammerslySampler2D", &u, &v);
 	delete sampler;
 
 	return 0;

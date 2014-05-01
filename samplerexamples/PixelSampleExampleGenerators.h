@@ -1,13 +1,49 @@
 #include "ExamplePinholeCamera.h"
 #include "Sampler2D.h"
 
-void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name);
-void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name);
+//For _mkdir
+#include <direct.h>
 
-void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name)
+#define EXAMPLEIMAGESIZE 244
+
+void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name);
+void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name, float* const u, float* const v);
+
+float intersectCheckerboard(ExamplePinholeCamera* camera, Sample2D filmloc, float u, float v)
+{
+	filmloc.x /= camera->getWidth();
+	filmloc.y /= camera->getHeight();
+	filmloc.x += u;
+	filmloc.y += v;
+
+	Sample2D aperture(0.0, 0.0);
+
+	//Get the ray
+	Ray shootme = camera->getRay(filmloc, aperture);
+
+	//Find XZ intercept
+	float t = -1.0f * shootme.origin.y / shootme.direction.y;
+	Vec3 intercept = shootme.atTime(t) * 2.0f;
+
+	//Intercept happened?
+	if (t > 0)
+	{
+		//Determine checker color
+		long long interceptintx = static_cast<long long>(intercept.x);
+		long long interceptintz = static_cast<long long>(intercept.z);
+		if ((interceptintx + interceptintz) % 2 == 0)
+		{
+			return 1.0f;
+		}
+	}
+
+	return 0.0f;
+}
+
+void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name, float* const u, float* const v)
 {
 	//For this case, let the "sensor" just be this image array:
-	const size_t imageoutSideSize = 244;
+	const size_t imageoutSideSize = EXAMPLEIMAGESIZE;
 	const size_t imageoutISIZE = imageoutSideSize;
 	const size_t imageoutJSIZE = imageoutSideSize;
 	const size_t imageoutKSIZE = 3;
@@ -15,6 +51,8 @@ void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name)
 	memset(imageout, 255, imageoutISIZE*imageoutJSIZE*imageoutKSIZE*sizeof(unsigned char));
 
 	ExamplePinholeCamera camera(imageoutISIZE, imageoutJSIZE, 1.0f);
+
+	size_t normalNumSamples = sampler->getNumSamples();
 
 	//Cast!
 	size_t i = 0;
@@ -27,8 +65,8 @@ void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name)
 			//TODO: consider scrambling here if needed (look for weird aliasing)
 			sampler->reinitialize();
 
-			float u = static_cast<float>(i) / static_cast<float>(camera.getWidth());
-			float v = static_cast<float>(j) / static_cast<float>(camera.getHeight());
+			*u = static_cast<float>(i) / static_cast<float>(camera.getWidth());
+			*v = static_cast<float>(j) / static_cast<float>(camera.getHeight());
 
 			unsigned char r = 0;
 			unsigned char g = 0;
@@ -36,60 +74,38 @@ void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name)
 
 			float sampleavg = 0.0f;
 
+			//if (i == 122 && j == 230)
+			//{
+			//	cout << "Test this pixel." << endl;
+			//}
+
 			//Sample several times
 			for (unsigned int k = 0; k < sampler->getNumSamples(); k++)
 			{
 				//generate origin and aperture ray samples for this pixel (later this may be a batch)
 				Sample2D filmloc = sampler->getNextSample();
-				filmloc.x /= camera.getWidth();
-				filmloc.y /= camera.getHeight();
-				filmloc.x += u;
-				filmloc.y += v;
 
-				Sample2D aperture(0.0, 0.0);
-
-				//Get the ray
-				Ray shootme = camera.getRay(filmloc, aperture);
-
-				//Find XZ intercept
-				float t = -1.0f * shootme.origin.y / shootme.direction.y;
-				Vec3 intercept = shootme.atTime(t) * 2.0f;
-
-				//Intercept happened?
-				if (t > 0)
-				{
-					//Determine checker color
-					long long interceptintx = static_cast<long long>(intercept.x);
-					long long interceptintz = static_cast<long long>(intercept.z);
-					if ((interceptintx + interceptintz) % 2 == 0)
-					{
-						//r = static_cast<unsigned char>(255.0f * t);
-						//g = static_cast<unsigned char>(255.0f * t);
-						//b = static_cast<unsigned char>(255.0f * t);
-						//r = 255;
-						//g = 255;
-						//b = 255;
-						sampleavg += 1.0f;
-					}
-					//else
-					//{
-					//r = 0;
-					//g = 0;
-					//b = 0;
-					//}
-				}
-				//else
-				//{
-				//	r = 255;
-				//	g = 0;
-				//	b = 128;
-				//}
+				sampleavg += intersectCheckerboard(&camera, filmloc, *u, *v);
 			}
 
 			sampleavg /= static_cast<float>(sampler->getNumSamples());
 			r = static_cast<unsigned char>(255.0f * sampleavg);
 			g = r;
 			b = r;
+
+			////special marks for adaptivesampler
+			//if (sampler->getNumSamples() == normalNumSamples)
+			//{
+			//	g = 9*g/10;
+			//	b = 9*b/10;
+			//}
+
+			//if (i == 122 && j == 230)
+			//{
+			//	r = 0;
+			//	g = 0;
+			//	b = 255;
+			//}
 
 			//Write checker color
 			i3(imageout, j, i, 0) = r;
@@ -98,6 +114,9 @@ void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name)
 
 		}//j loop
 	}//i loop
+
+	//Make the directory
+	_mkdir("examples");
 
 	ImageOutRGB2BMP("examples/" + name + "InfiniteCheckers" + ".bmp", imageoutISIZE, imageoutJSIZE, imageout);
 }//function to generate infinite checker pattern
@@ -147,5 +166,8 @@ void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name)
 		i3(imageout, y, x, 2) = 0;
 	}
 
-	ImageOutRGB2BMP("examples/" + name + "2DSampleGrid" + ".bmp", imageoutISIZE, imageoutJSIZE, imageout);
+	//Make the directory
+	_mkdir("examples");
+
+	ImageOutRGB2BMP("examples/" + name + "SampleGrid" + ".bmp", imageoutISIZE, imageoutJSIZE, imageout);
 }//end 2d sample grid image generation function

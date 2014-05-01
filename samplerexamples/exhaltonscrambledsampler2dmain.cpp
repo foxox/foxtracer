@@ -17,6 +17,7 @@ int main(int argc, char** argv)
 	std::tr1::random_device rd;
 	std::tr1::mt19937 mt(rd());
 	//std::tr1::uniform_real_distribution<> distribution(0.0, 1.0);
+	float u, v;
 	
 	Sampler2D* sampler;
 	
@@ -34,7 +35,7 @@ int main(int argc, char** argv)
 	numSamples = 4;
 
 	sampler = new HaltonScrambledSampler2D(numSamples, &mt, xrange, yrange);
-	generateExampleImageInfiniteCheckers(sampler, "HaltonScrambledSampler2D");
+	generateExampleImageInfiniteCheckers(sampler, "HaltonScrambledSampler2D", &u, &v);
 	delete sampler;
 
 	return 0;
