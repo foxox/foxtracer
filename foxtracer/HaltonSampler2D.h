@@ -7,6 +7,8 @@ class HaltonSampler2D :
 protected:
 	size_t samplenum;
 
+	static const bool shouldReinitializeIfOversampled = false;
+
 public:
 	HaltonSampler2D(void);
 	HaltonSampler2D(size_t numSamples,

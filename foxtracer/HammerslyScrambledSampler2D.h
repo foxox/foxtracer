@@ -31,6 +31,8 @@ protected:
 	//	}
 	//}
 
+	static const bool shouldReinitializeIfOversampled = false;
+
 public:
 	HammerslyScrambledSampler2D(void);
 	HammerslyScrambledSampler2D(size_t numSamples,

@@ -13,6 +13,8 @@ protected:
 	size_t* const xshuffle;
 	size_t* const yshuffle;
 
+	static const bool shouldReinitializeIfOversampled = false;
+
 	//Based on implementation in Physically Based Rendering by Matt Pharr and Greg Humphreys, Second Edition 
 	inline void GeneratePermutation(uint32_t *buf, uint32_t b)
 	{

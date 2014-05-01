@@ -10,6 +10,8 @@ protected:
 	uint32_t xscramble;
 	uint32_t yscramble;
 
+	static const bool shouldReinitializeIfOversampled = false;
+
 public:
 	VanDerCorputSobolScrambledSampler2D(void);
 	VanDerCorputSobolScrambledSampler2D(size_t numSamples,

@@ -11,6 +11,8 @@ protected:
 	Sample2D* const samples;
 	size_t samplenum;
 	const size_t numCandidates;
+
+	static const bool shouldReinitializeIfOversampled = false;
 	
 public:
 	BestCandidateSampler2D(void);

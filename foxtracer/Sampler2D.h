@@ -13,6 +13,8 @@ protected:
 	std::uniform_real_distribution<float> RNGDistributionX;
 	std::uniform_real_distribution<float> RNGDistributionY;
 
+	static const bool shouldReinitializeIfOversampled = true;
+
 public:
 	//Sampler2D(void);
 	Sampler2D(size_t numSamples,

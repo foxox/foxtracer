@@ -7,6 +7,8 @@ class VanDerCorputSobolSampler2D :
 protected:
 	size_t samplenum;
 
+	static const bool shouldReinitializeIfOversampled = false;
+
 public:
 	VanDerCorputSobolSampler2D(void);
 	VanDerCorputSobolSampler2D(size_t numSamples,

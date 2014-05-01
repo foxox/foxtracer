@@ -7,6 +7,8 @@ class HammerslySampler2D :
 protected:
 	size_t samplenum;
 
+	static const bool shouldReinitializeIfOversampled = false;
+
 public:
 	HammerslySampler2D(void);
 	HammerslySampler2D(size_t numSamples,
