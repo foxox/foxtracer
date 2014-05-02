@@ -34,7 +34,7 @@ int main(int argc, char** argv)
 
 	//CHECKERS
 
-	numSamples = 4;
+	numSamples = 8;
 
 	sampler2 = new SimpleSampler2D(numSamples, &mt, xrange, yrange);
 	sampler = new AdaptiveSampler2D(numSamples, &mt, xrange, yrange, sampler2, eval, &u, &v);

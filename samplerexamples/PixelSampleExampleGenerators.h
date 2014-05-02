@@ -93,12 +93,12 @@ void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name, float
 			g = r;
 			b = r;
 
-			////special marks for adaptivesampler
-			//if (sampler->getNumSamples() == normalNumSamples)
-			//{
-			//	g = 9*g/10;
-			//	b = 9*b/10;
-			//}
+			//special marks for adaptivesampler
+			if (sampler->getNumSamples() == normalNumSamples)
+			{
+				g = 1*g/2;
+				b = 1*b/2;
+			}
 
 			//if (i == 122 && j == 230)
 			//{
