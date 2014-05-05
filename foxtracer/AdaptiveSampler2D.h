@@ -22,7 +22,9 @@ protected:
 			float a = this->evaluateSample(this->samples[i], *u, *v);
 			float b = this->evaluateSample(this->samples[i - 1], *u, *v);
 			if (a != b)
+			{
 				return true;
+			}
 		}
 		return false;
 	}
@@ -41,7 +43,7 @@ public:
 		samplecount(0),
 		samples(new Sample2D[numSamples]),
 		numSamplesExpanded(numSamples),
-		maxNumSamples(10*numSamples),
+		maxNumSamples(4*numSamples),
 		evaluateSample(_evaluateSample),
 		u(_u), v(_v)
 	{}
