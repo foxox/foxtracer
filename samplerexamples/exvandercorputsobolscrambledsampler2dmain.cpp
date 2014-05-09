@@ -31,7 +31,7 @@ int main(int argc, char** argv)
 
 	//CHECKERS
 
-	numSamples = 4;
+	numSamples = EXAMPLENUMSAMPLES;
 
 	//0,2 sequence
 	sampler = new VanDerCorputSobolScrambledSampler2D(numSamples, &mt, xrange, yrange);

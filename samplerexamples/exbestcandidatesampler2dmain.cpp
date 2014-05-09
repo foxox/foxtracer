@@ -31,7 +31,7 @@ int main(int argc, char** argv)
 
 	//CHECKERS
 
-	numSamples = 4;
+	numSamples = EXAMPLENUMSAMPLES;
 
 	
 	sampler = new BestCandidateSampler2D(numSamples, &mt, xrange, yrange, 10);

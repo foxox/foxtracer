@@ -30,7 +30,7 @@ int main(int argc, char** argv)
 
 	//CHECKERS
 
-	numSamples = 4;
+	numSamples = EXAMPLENUMSAMPLES;
 
 	sampler = new StratifiedSampler2D(numSamples, &mt, xrange, yrange,
 		static_cast<size_t>(sqrtf(static_cast<float>(numSamples))),

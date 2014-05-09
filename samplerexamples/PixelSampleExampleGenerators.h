@@ -5,6 +5,7 @@
 #include <direct.h>
 
 #define EXAMPLEIMAGESIZE 244
+#define EXAMPLENUMSAMPLES 16
 
 void generateExampleImage2DSampleGrid(Sampler2D* sampler, string name);
 void generateExampleImageInfiniteCheckers(Sampler2D* sampler, string name, float* const u, float* const v);

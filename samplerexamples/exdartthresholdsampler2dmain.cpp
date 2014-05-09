@@ -31,12 +31,24 @@ int main(int argc, char** argv)
 
 	//CHECKERS
 
-	numSamples = 4;
+	numSamples = EXAMPLENUMSAMPLES;
 
+#if (EXAMPLENUMSAMPLES == 4)
 	//failed samples go to 0,0 (reduce threshold or sample count)
 	sampler = new DartThresholdSampler2D(numSamples, &mt, xrange, yrange, 0.7f * (xrange.high-xrange.low) / sqrt(static_cast<float>(numSamples)));
 	generateExampleImageInfiniteCheckers(sampler, "DartThresholdSampler2D", &u, &v);
 	delete sampler;
+#elif (EXAMPLENUMSAMPLES == 9)
+	//failed samples go to 0,0 (reduce threshold or sample count)
+	sampler = new DartThresholdSampler2D(numSamples, &mt, xrange, yrange, 0.3f * (xrange.high - xrange.low) / sqrt(static_cast<float>(numSamples)));
+	generateExampleImageInfiniteCheckers(sampler, "DartThresholdSampler2D", &u, &v);
+	delete sampler;
+#elif (EXAMPLENUMSAMPLES == 16)
+	//failed samples go to 0,0 (reduce threshold or sample count)
+	sampler = new DartThresholdSampler2D(numSamples, &mt, xrange, yrange, 0.2f * (xrange.high - xrange.low) / sqrt(static_cast<float>(numSamples)));
+	generateExampleImageInfiniteCheckers(sampler, "DartThresholdSampler2D", &u, &v);
+	delete sampler;
+#endif
 
 
 	return 0;

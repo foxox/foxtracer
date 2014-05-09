@@ -31,7 +31,7 @@ int main(int argc, char** argv)
 
 	//CHECKERS
 
-	numSamples = 4;
+	numSamples = EXAMPLENUMSAMPLES;
 	
 	//unscrambled
 	sampler = new HaltonSampler2D(numSamples, &mt, xrange, yrange);

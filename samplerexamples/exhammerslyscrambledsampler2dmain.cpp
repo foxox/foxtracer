@@ -30,7 +30,7 @@ int main(int argc, char** argv)
 
 	//CHECKERS
 
-	numSamples = 4;
+	numSamples = EXAMPLENUMSAMPLES;
 
 	sampler = new HammerslyScrambledSampler2D(numSamples, &mt, xrange, yrange);
 	generateExampleImageInfiniteCheckers(sampler, "HammerslyScrambledSampler2D", &u, &v);
